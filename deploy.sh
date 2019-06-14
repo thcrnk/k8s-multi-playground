@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-docker build -t thcrnk/multi-client:latest -t thcrnk/multi-client$SHA -f ./client/Dockerfile ./client
-docker build -t thcrnk/multi-server:latest -t thcrnk/multi-server$SHA -f ./server/Dockerfile ./server
-docker build -t thcrnk/multi-worker:latest -t thcrnk/multi-worker$SHA -f ./worker/Dockerfile ./worker
+docker build -t thcrnk/multi-client:latest -t thcrnk/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t thcrnk/multi-server:latest -t thcrnk/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t thcrnk/multi-worker:latest -t thcrnk/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push thcrnk/multi-client:latest
 docker push thcrnk/multi-server:latest
